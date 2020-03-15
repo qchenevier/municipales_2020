@@ -40,5 +40,8 @@ folium.LayerControl().add_to(m)
 m.save("plot.html")
 
 #%%
+m
+
+#%%
 from google.colab import files
 files.download("plot.html")
