@@ -3,8 +3,9 @@ import pandas as pd
 import folium
 import requests
 
-with open("new_geo.json") as f:
-    circonscriptions = json.load(f)
+json_url = "https://raw.githubusercontent.com/qchenevier/municipales_2020/master/new_geo.json"
+
+circonscriptions = requests.get(json_url).json()
 
 #%%
 circonscriptions["features"][0]["properties"]
